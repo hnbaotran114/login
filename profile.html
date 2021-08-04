@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>profile</title>
+</head>
+<body>
+     {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <p>{{ message}}, {{session['email']}}</p>  
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %} 
+      <p>Click <a href = "/success" >here</a> to comeback</p>
+</body>
+</html>
